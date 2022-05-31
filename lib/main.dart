@@ -1,5 +1,8 @@
 import 'package:emed/routes/router.dart';
+import 'package:emed/views/auth/signup/signup_auth_view.dart';
+import 'package:emed/views/auth/signup/signup_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +14,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
       ),
       onGenerateRoute: MyRoutes.instance.onGenerateRoute,
-      initialRoute: "/login",
+      initialRoute: "/signup",
+      // home: BlocProvider(
+      //   create: (context) => SignUpCubit(),
+      //   child: const SignUp(),
+      // ),
     );
   }
 }
