@@ -3,6 +3,7 @@ import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/components/text_style_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
 import 'package:emed/views/auth/signup/signup_cubit.dart';
+import 'package:emed/views/auth/signup/signup_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,7 +20,7 @@ class SignUp extends StatelessWidget {
           title: "Sign Up",
           centerTitle: true,
         ),
-        body: BlocConsumer(
+        body: BlocConsumer<SignUpCubit, SignUpState>(
           listener: (context, state) {},
           builder: (context, state) => Padding(
             padding: const EdgeInsets.all(20),
@@ -78,10 +79,11 @@ class SignUp extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       TextFormField(
+                        obscureText: context.watch<SignUpCubit>().isTrue,
                         decoration: InputDecoration(
                           hintText: "Create your new password...",
                           suffixIcon: IconButton(
-                            icon: state != false
+                            icon: !context.watch<SignUpCubit>().isTrue
                                 ? const Icon(Icons.remove_red_eye_outlined)
                                 : const Icon(Icons.disabled_visible_outlined),
                             onPressed: () {
@@ -123,3 +125,31 @@ class SignUp extends StatelessWidget {
     );
   }
 }
+//context.watch<SignUpCubit>().isTrue !=
+                                        // false
+                                    // ? const Icon(Icons.remove_red_eye_outlined)
+                                    // : 
+
+ // StatefulBuilder(
+                      //   builder: (context, setState) {
+                      //     return TextFormField(
+                      //       obscureText: context.watch<SignUpCubit>().isTrue,
+                      //       decoration: InputDecoration(
+                      //         hintText: "Create your new password...",
+                      //         suffixIcon: IconButton(
+                      //           icon:
+                      //               const Icon(Icons.disabled_visible_outlined),
+                      //           onPressed: () {
+                      //             context.read<SignUpCubit>().visible(
+                      //                   context.watch<SignUpCubit>().isTrue,
+                      //                 );
+                      //             // setState(() {});
+                      //           },
+                      //         ),
+                      //         border: OutlineInputBorder(
+                      //           borderRadius: MyBorderComp.textFromFieldBorder,
+                      //         ),
+                      //       ),
+                      //     );
+                      //   },
+                      // ),

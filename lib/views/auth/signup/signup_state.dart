@@ -11,7 +11,8 @@ class SignUpLoading extends SignUpState {
 }
 
 class SignUpComplete extends SignUpState {
-  SignUpComplete();
+  bool secPass;
+  SignUpComplete({required this.secPass});
 }
 
 class SignUpError extends SignUpState {
