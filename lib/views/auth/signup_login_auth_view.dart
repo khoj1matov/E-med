@@ -4,8 +4,8 @@ import 'package:emed/core/components/text_style_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class SignUpLoginAuthView extends StatelessWidget {
+  const SignUpLoginAuthView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
