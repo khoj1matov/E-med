@@ -1,4 +1,6 @@
-import 'package:emed/views/auth/signup/signup_auth_view.dart';
+import 'package:emed/views/auth/signup/signup_confirm_auth_view.dart';
+import 'package:emed/views/auth/signup/signup_id_auth_view.dart';
+import 'package:emed/views/auth/signup/signup_register_auth_view.dart';
 import 'package:emed/views/auth/signup_login_auth_view.dart';
 import 'package:emed/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +18,12 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const LoginView());
       case '/splash':
         return MaterialPageRoute(builder: (_) => const SplashView());
-      case '/signup':
-        return MaterialPageRoute(builder: (_) =>  SignUp());
-   
+      case '/signup_register':
+        return MaterialPageRoute(builder: (_) => const SignUpRegisterView());
+      case '/signup_confirm':
+        return MaterialPageRoute(builder: (_) => const SignUpConfirmView());
+      case '/signup_id':
+        return MaterialPageRoute(builder: (_) => const SignUpIdView());
     }
   }
 }

@@ -23,17 +23,25 @@ class MyTextStyle {
       );
 
   static get signUpViewAppBarTitleTextStyle => TextStyle(
-      color: ColorConst.kPrimaryBlack,
-      fontSize: 18,
-      fontWeight: FontWeight.w500);
+        color: ColorConst.kPrimaryBlack,
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+      );
 
   static get signUpViewFullNameTextStyle => TextStyle(
-      color: ColorConst.kPrimaryBlack,
-      fontSize: 16,
-      fontWeight: FontWeight.w500);
+        color: ColorConst.kPrimaryBlack,
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+      );
 
   static get signUpViewWeWillSendTextStyle => TextStyle(
         color: ColorConst.nuncOrciSedColor,
         fontSize: 14,
+      );
+
+  static get signUpIdViewTextStyle => TextStyle(
+        color: ColorConst.kPrimaryBlack,
+        fontSize: 22,
+        fontWeight: FontWeight.w500,
       );
 }
