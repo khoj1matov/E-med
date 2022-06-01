@@ -17,7 +17,7 @@ class SignUpRegisterView extends StatelessWidget {
       child: Scaffold(
         appBar: MyAppBar(
           context: context,
-          title: "Sign Up",
+          title: const Text("Sign Up"),
           centerTitle: true,
         ),
         body: BlocConsumer<SignUpCubit, SignUpState>(

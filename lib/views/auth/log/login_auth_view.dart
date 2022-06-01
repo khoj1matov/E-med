@@ -17,7 +17,7 @@ class LogInAuthView extends StatelessWidget {
       child: Scaffold(
         appBar: MyAppBar(
           context: context,
-          title: "Log In",
+          title: const Text("Log In"),
           centerTitle: true,
         ),
         body: BlocConsumer<SignUpCubit, SignUpState>(

@@ -13,7 +13,7 @@ class SignUpIdView extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(
         context: context,
-        title: "Your personal ID",
+        title: const Text("Your personal ID"),
         centerTitle: true,
       ),
       body: Padding(

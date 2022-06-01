@@ -3,7 +3,8 @@ import 'package:emed/core/components/text_style_const.dart';
 import 'package:flutter/material.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
-  String title;
+  Widget title;
+  Widget? leading;
   bool? centerTitle;
   BuildContext context;
   List<Widget>? action;
@@ -12,6 +13,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
     Key? key,
     required this.title,
     this.centerTitle,
+    this.leading,
     required this.context,
     this.action,
   }) : super(key: key);
@@ -19,7 +21,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title),
+      title: title,
       centerTitle: centerTitle,
       actions: action,
       backgroundColor: ColorConst.appBarBackgroundColor,

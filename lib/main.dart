@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
       ),
       onGenerateRoute: MyRoutes.instance.onGenerateRoute,
-      initialRoute: "/login",
+      initialRoute: "/calendar_first",
     );
   }
 }

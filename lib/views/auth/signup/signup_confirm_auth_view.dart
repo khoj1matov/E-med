@@ -10,7 +10,7 @@ class SignUpConfirmView extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(
         context: context,
-        title: "Sign Up",
+        title: const Text("Sign Up"),
         centerTitle: true,
       ),
       body: Column(
