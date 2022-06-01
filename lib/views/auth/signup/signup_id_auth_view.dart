@@ -1,3 +1,4 @@
+import 'package:emed/core/components/borders_comp.dart';
 import 'package:emed/core/components/text_style_const.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
@@ -36,62 +37,85 @@ class SignUpIdView extends StatelessWidget {
             Expanded(
               flex: 5,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Your ID",
-                    style: MyTextStyle.signUpViewFullNameTextStyle,
-                  ),
-                  const SizedBox(height: 15),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 1,
-                    height: MediaQuery.of(context).size.height * 0.08,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          decoration: BoxDecoration(
-                            color: ColorConst.signUpViewTextFromFielsColor,
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(10),
-                              bottomLeft: Radius.circular(10),
-                            ),
-                            border: Border.all(width: 1),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "123456",
-                              style: MyTextStyle.signUpIdViewTextStyle,
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.29,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
-                                topRight: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              border: Border.all(width: 1),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                const SizedBox(height: double.infinity),
-                                Text(
-                                  "copy",
-                                  style: MyTextStyle
-                                      .signUpViewAppBarTitleTextStyle,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Your ID",
+                        style: MyTextStyle.signUpViewFullNameTextStyle,
+                      ),
+                      const SizedBox(height: 15),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 1,
+                        height: MediaQuery.of(context).size.height * 0.08,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.6,
+                              decoration: BoxDecoration(
+                                color: ColorConst.signUpViewTextFromFielsColor,
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
                                 ),
-                                SvgPicture.asset("assets/icons/copy.svg"),
-                              ],
+                                border: Border.all(width: 1),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "123456",
+                                  style: MyTextStyle.signUpIdViewTextStyle,
+                                ),
+                              ),
                             ),
-                          ),
-                          onTap: () {},
+                            InkWell(
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 0.29,
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.only(
+                                    topRight: Radius.circular(10),
+                                    bottomRight: Radius.circular(10),
+                                  ),
+                                  border: Border.all(width: 1),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    const SizedBox(height: double.infinity),
+                                    Text(
+                                      "copy",
+                                      style: MyTextStyle
+                                          .signUpViewAppBarTitleTextStyle,
+                                    ),
+                                    SvgPicture.asset("assets/icons/copy.svg"),
+                                  ],
+                                ),
+                              ),
+                              onTap: () {},
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
+                    ],
+                  ),
+                  ElevatedButton(
+                    child: Text(
+                      "Go to your account",
+                      style: MyTextStyle.signUpLoginViewElevated1TextStyle,
                     ),
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      fixedSize: (const Size(350, 56)),
+                      primary: ColorConst.splashScreenColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            MyBorderComp.signupLoginViewElevatedButtonBorder,
+                      ),
+                    ),
+                    onPressed: () {},
                   ),
                 ],
               ),
