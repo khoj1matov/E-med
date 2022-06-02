@@ -21,6 +21,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: leading,
       title: title,
       centerTitle: centerTitle,
       actions: action,

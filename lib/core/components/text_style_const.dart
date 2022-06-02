@@ -44,4 +44,10 @@ class MyTextStyle {
         fontSize: 22,
         fontWeight: FontWeight.w500,
       );
+
+    static get calendarNoMedicationTextStyle => TextStyle(
+        color: ColorConst.kPrimaryBlack,
+        fontSize: 26,
+        fontWeight: FontWeight.w600,
+      );
 }

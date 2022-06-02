@@ -4,6 +4,7 @@ import 'package:emed/views/auth/signup/signup_id_auth_view.dart';
 import 'package:emed/views/auth/signup/signup_register_auth_view.dart';
 import 'package:emed/views/auth/signup_login_auth_view.dart';
 import 'package:emed/views/calendar/calendar_first_view.dart';
+import 'package:emed/views/calendar/calendar_second_view.dart';
 import 'package:emed/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -28,9 +29,11 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const SignUpIdView());
       case '/login':
         return MaterialPageRoute(builder: (_) => const LogInAuthView());
-     case '/calendar_first':
+      case '/calendar_first':
         return MaterialPageRoute(builder: (_) => const CalendarFirstView());
-    
+
+      case '/calendar_second':
+        return MaterialPageRoute(builder: (_) => const CalendarSecondView());
     }
   }
 }

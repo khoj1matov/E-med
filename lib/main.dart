@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
       ),
       onGenerateRoute: MyRoutes.instance.onGenerateRoute,
-      initialRoute: "/calendar_first",
+      initialRoute: "/calendar_second",
     );
   }
 }
