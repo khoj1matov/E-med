@@ -23,7 +23,6 @@ class SignUpRegisterView extends StatelessWidget {
         body: BlocConsumer<SignUpCubit, SignUpState>(
           listener: (context, state) {},
           builder: (context, state) => SingleChildScrollView(
-            physics: const NeverScrollableScrollPhysics(),
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.89,
               width: MediaQuery.of(context).size.width * 1,
@@ -120,7 +119,9 @@ class SignUpRegisterView extends StatelessWidget {
                                 .signupLoginViewElevatedButtonBorder,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/signup_id');
+                        },
                       ),
                     ),
                   ],

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class CalendarFirstView extends StatelessWidget {
-  const CalendarFirstView({Key? key}) : super(key: key);
+class CalendarView extends StatelessWidget {
+  const CalendarView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -83,21 +83,21 @@ class CalendarFirstView extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                        child: Text(
-                          "Add new appointment yet",
-                          style: MyTextStyle.signUpLoginViewElevated1TextStyle,
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          fixedSize: (const Size(340, 60)),
-                          primary: ColorConst.splashScreenColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: MyBorderComp
-                                .signupLoginViewElevatedButtonBorder,
-                          ),
-                        ),
-                        onPressed: () {},
-                      ),
+                  child: Text(
+                    "Add new appointment yet",
+                    style: MyTextStyle.signUpLoginViewElevated1TextStyle,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    fixedSize: (const Size(340, 60)),
+                    primary: ColorConst.splashScreenColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          MyBorderComp.signupLoginViewElevatedButtonBorder,
+                    ),
+                  ),
+                  onPressed: () {},
+                ),
               ],
             ),
           ),

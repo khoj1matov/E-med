@@ -58,7 +58,12 @@ class SignUpLoginAuthView extends StatelessWidget {
                             MyBorderComp.signupLoginViewElevatedButtonBorder,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        '/signup_register',
+                      );
+                    },
                   ),
                   const SizedBox(height: 18),
                   ElevatedButton(
@@ -79,7 +84,12 @@ class SignUpLoginAuthView extends StatelessWidget {
                         width: 2,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        '/login',
+                      );
+                    },
                   ),
                 ],
               ),

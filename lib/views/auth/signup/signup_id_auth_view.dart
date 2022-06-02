@@ -115,7 +115,9 @@ class SignUpIdView extends StatelessWidget {
                             MyBorderComp.signupLoginViewElevatedButtonBorder,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/home");
+                    },
                   ),
                 ],
               ),

@@ -10,4 +10,5 @@ class ColorConst {
   static Color appBarBackgroundColor = const Color(0xFFF9F9F9).withOpacity(0.9);
   static Color signUpViewTextFromFielsColor = const Color(0xFFE6E6E8);
   static Color listTilleblablaColor = const Color(0XFFE6E6E8);
+  static Color listTilleblablaGreenColor = const Color(0XFFECF8F0);
 }

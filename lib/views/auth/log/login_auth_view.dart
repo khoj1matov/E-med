@@ -99,7 +99,9 @@ class LogInAuthView extends StatelessWidget {
                                 .signupLoginViewElevatedButtonBorder,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/home');
+                        },
                       ),
                     ),
                   ],

@@ -19,8 +19,9 @@ class MedicationsColumn {
             const Text("2 times a day"),
           ],
         ),
+        const SizedBox(height: 5),
         Container(
-          margin: EdgeInsets.all(5),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           child: const Text("1 pill taken"),
           decoration: BoxDecoration(
             color: ColorConst.listTilleblablaColor,
@@ -30,19 +31,25 @@ class MedicationsColumn {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            const Text("1 pill"),
+            const Text("1 teaspoon"),
+            const SizedBox(width: 5),
             CircleAvatar(
               radius: 2,
-              backgroundColor: ColorConst.kPrimaryBlack,
+              backgroundColor: ColorConst.nuncOrciSedColor,
             ),
-            const Text("2 times a day"),
+            const SizedBox(width: 5),
+            const Text("3 times a day"),
           ],
         ),
+        const SizedBox(height: 5),
         Container(
-          child: const Text("1 pill taken"),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          child: const Text("2 teaspoon taken"),
           decoration: BoxDecoration(
             color: ColorConst.listTilleblablaColor,
             borderRadius: BorderRadius.circular(4),
@@ -51,42 +58,45 @@ class MedicationsColumn {
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            const Text("1 pill"),
+            const Text("1 teaspoon"),
+            const SizedBox(width: 5),
             CircleAvatar(
               radius: 2,
-              backgroundColor: ColorConst.kPrimaryBlack,
+              backgroundColor: ColorConst.nuncOrciSedColor,
             ),
-            const Text("2 times a day"),
+            const SizedBox(width: 5),
+            const Text("3 times a day"),
           ],
-        ),
-        Container(
-          child: const Text("1 pill taken"),
-          decoration: BoxDecoration(
-            color: ColorConst.listTilleblablaColor,
-            borderRadius: BorderRadius.circular(4),
-          ),
         ),
       ],
     ),
     Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            const Text("1 pill"),
+            const Text("1 syringe"),
+            const SizedBox(width: 5),
             CircleAvatar(
               radius: 2,
-              backgroundColor: ColorConst.kPrimaryBlack,
+              backgroundColor: ColorConst.nuncOrciSedColor,
             ),
-            const Text("2 times a day"),
+            const SizedBox(width: 5),
+            const Text("1 times a day"),
           ],
         ),
+        const SizedBox(height: 5),
         Container(
-          child: const Text("1 pill taken"),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          child: const Text("full taken"),
           decoration: BoxDecoration(
-            color: ColorConst.listTilleblablaColor,
+            color: ColorConst.listTilleblablaGreenColor,
             borderRadius: BorderRadius.circular(4),
           ),
         ),
