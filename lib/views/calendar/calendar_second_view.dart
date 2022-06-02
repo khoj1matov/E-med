@@ -1,3 +1,4 @@
+import 'package:emed/core/components/medications_column.dart';
 import 'package:emed/core/components/text_style_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,25 @@ class CalendarSecondView extends StatelessWidget {
                               width: 50,
                             ),
                           ),
+                          title: Padding(
+                            padding: const EdgeInsets.only(bottom: 7),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Patacetamol",
+                                  style:
+                                      MyTextStyle.signUpViewAppBarTitleTextStyle,
+                                ),
+                                const SizedBox(width: 10),
+                                Text(
+                                  "250 mg",
+                                  style:
+                                      MyTextStyle.signUpViewWeWillSendTextStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                          subtitle: MedicationsColumn.medications[index],
                         );
                       },
                       itemCount: 4,
