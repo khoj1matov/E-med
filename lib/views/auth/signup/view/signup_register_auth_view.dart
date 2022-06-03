@@ -2,8 +2,8 @@ import 'package:emed/core/components/borders_comp.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/components/text_style_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
-import 'package:emed/views/auth/signup/signup_cubit.dart';
-import 'package:emed/views/auth/signup/signup_state.dart';
+import 'package:emed/views/auth/signup/cubit/signup_cubit.dart';
+import 'package:emed/views/auth/signup/state/signup_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,8 +1,5 @@
 import 'package:emed/routes/router.dart';
-import 'package:emed/views/auth/signup/signup_register_auth_view.dart';
-import 'package:emed/views/auth/signup/signup_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +17,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
       ),
       onGenerateRoute: MyRoutes.instance.onGenerateRoute,
-      initialRoute: "/splash",
+      initialRoute: "/cart",
     );
   }
 }

@@ -116,7 +116,7 @@ class SignUpIdView extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, "/home");
+                      Navigator.pushReplacementNamed(context, "/cart");
                     },
                   ),
                 ],
