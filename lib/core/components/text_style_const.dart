@@ -1,5 +1,6 @@
 import 'package:emed/core/constants/color_const.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class MyTextStyle {
   static get signUpLoginViewYourMedicalTextStyle => TextStyle(
@@ -45,9 +46,21 @@ class MyTextStyle {
         fontWeight: FontWeight.w500,
       );
 
-    static get calendarNoMedicationTextStyle => TextStyle(
+  static get calendarNoMedicationTextStyle => TextStyle(
         color: ColorConst.kPrimaryBlack,
         fontSize: 26,
         fontWeight: FontWeight.w600,
+      );
+
+  static get doctorSearchTextStyle => TextStyle(
+        color: ColorConst.doctorsSearchTextColor,
+        fontSize: 17,
+        fontWeight: FontWeight.w500,
+      );
+
+  static get cancelTextStyle => const TextStyle(
+        // color: Colors.blue,
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
       );
 }

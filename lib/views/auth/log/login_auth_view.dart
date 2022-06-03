@@ -19,6 +19,7 @@ class LogInAuthView extends StatelessWidget {
           context: context,
           title: const Text("Log In"),
           centerTitle: true,
+          preferedSizeHeight: 0.08,
         ),
         body: BlocConsumer<SignUpCubit, SignUpState>(
           listener: (context, state) {},

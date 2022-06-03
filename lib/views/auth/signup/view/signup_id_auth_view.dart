@@ -15,6 +15,7 @@ class SignUpIdView extends StatelessWidget {
         context: context,
         title: const Text("Your personal ID"),
         centerTitle: true,
+        preferedSizeHeight: 0.08,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

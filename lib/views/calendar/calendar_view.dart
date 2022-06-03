@@ -15,6 +15,7 @@ class CalendarView extends StatelessWidget {
       appBar: MyAppBar(
         centerTitle: true,
         context: context,
+        preferedSizeHeight: 0.08,
         leading: const Image(image: AssetImage("assets/images/ellipse.png")),
         title: SvgPicture.asset("assets/icons/Group 33665.svg"),
         action: [

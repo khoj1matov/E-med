@@ -12,6 +12,7 @@ class SignUpConfirmView extends StatelessWidget {
         context: context,
         title: const Text("Sign Up"),
         centerTitle: true,
+        preferedSizeHeight: 0.08,
       ),
       body: Column(
         children: [

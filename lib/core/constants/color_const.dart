@@ -11,4 +11,7 @@ class ColorConst {
   static Color signUpViewTextFromFielsColor = const Color(0xFFE6E6E8);
   static Color listTilleblablaColor = const Color(0XFFE6E6E8);
   static Color listTilleblablaGreenColor = const Color(0XFFECF8F0);
+  static Color doctorsSearchColor = const Color(0XFF767680).withOpacity(0.12);
+  static Color doctorsSearchTextColor =
+      const Color(0XFF3C3C43).withOpacity(0.6);
 }

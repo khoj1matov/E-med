@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget title;
+  PreferredSize? bottom;
+  double preferedSizeHeight;
   Widget? leading;
   bool? centerTitle;
   BuildContext context;
@@ -13,6 +15,8 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
     Key? key,
     required this.title,
     this.centerTitle,
+    this.bottom,
+    required this.preferedSizeHeight,
     this.leading,
     required this.context,
     this.action,
@@ -28,10 +32,11 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       backgroundColor: ColorConst.appBarBackgroundColor,
       elevation: 0,
       titleTextStyle: MyTextStyle.signUpViewAppBarTitleTextStyle,
+      bottom: bottom,
     );
   }
 
   @override
   Size get preferredSize =>
-      Size.fromHeight(MediaQuery.of(context).size.height * 0.08);
+      Size.fromHeight(MediaQuery.of(context).size.height * preferedSizeHeight);
 }

@@ -20,6 +20,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: MyAppBar(
         centerTitle: true,
         context: context,
+        preferedSizeHeight: 0.07,
         leading: const Image(image: AssetImage("assets/images/ellipse.png")),
         title: SvgPicture.asset("assets/icons/Group 33665.svg"),
         action: [
@@ -35,6 +36,10 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Divider(
+                thickness: 0.5,
+                color: ColorConst.doctorsSearchTextColor,
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
                 child: Text(
@@ -43,7 +48,13 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               Column(
-                children: [a(), a(), a(), a()],
+                children: [
+                  _medications("1 pill", "2", "1 pill", null),
+                  _medications("2 teaspoon", "3", "2 teasppoon", null),
+                  _medications("1 teaspoon", "3", "4 teaspoon", null),
+                  _medications("1 syringe", "1", "full",
+                      ColorConst.listTilleblablaGreenColor),
+                ],
               ),
               TableCalendar(
                 firstDay: DateTime.utc(2010, 10, 16),
@@ -84,7 +95,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  a() {
+  _medications(String text1, String text2, String text3, Color? color) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: ListTile(
@@ -95,21 +106,53 @@ class _HomeViewState extends State<HomeView> {
             width: 50,
           ),
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(bottom: 7),
-          child: Row(
-            children: [
-              Text(
-                "Patacetamol",
-                style: MyTextStyle.signUpViewAppBarTitleTextStyle,
-              ),
-              const SizedBox(width: 10),
-              Text(
-                "250 mg",
-                style: MyTextStyle.signUpViewWeWillSendTextStyle,
-              ),
-            ],
-          ),
+        title: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  "Patacetamol",
+                  style: MyTextStyle.signUpViewAppBarTitleTextStyle,
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  "250 mg",
+                  style: MyTextStyle.signUpViewWeWillSendTextStyle,
+                ),
+              ],
+            ),
+            const SizedBox(height: 5),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text(text1),
+                    const SizedBox(width: 5),
+                    CircleAvatar(
+                      radius: 2,
+                      backgroundColor: ColorConst.nuncOrciSedColor,
+                    ),
+                    const SizedBox(width: 5),
+                    Text("$text2 times a day"),
+                  ],
+                ),
+                const SizedBox(height: 5),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  child: Text("$text3 teken"),
+                  decoration: BoxDecoration(
+                    color: color != ColorConst.listTilleblablaGreenColor
+                        ? ColorConst.listTilleblablaColor
+                        : color,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

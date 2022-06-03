@@ -37,7 +37,7 @@ class _CartViewState extends State<CartView>
           HospitalView(),
         ],
       ),
-      floatingActionButton: TabBar(
+      bottomNavigationBar: TabBar(
         indicatorColor: Colors.transparent,
         controller: tabController,
         tabs: [
@@ -47,7 +47,8 @@ class _CartViewState extends State<CartView>
           tabs("hospital", colorTabBar, 3),
         ],
         onTap: (v) {
-          
+          currentIndex = tabController.index;
+          setState(() {});
         },
       ),
     );
