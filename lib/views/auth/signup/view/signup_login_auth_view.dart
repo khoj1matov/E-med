@@ -59,10 +59,7 @@ class SignUpLoginAuthView extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        '/signup_register',
-                      );
+                      Navigator.pushNamed(context, '/signup_register');
                     },
                   ),
                   const SizedBox(height: 18),
@@ -85,7 +82,7 @@ class SignUpLoginAuthView extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
+                      Navigator.pushNamed(
                         context,
                         '/login',
                       );

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget title;
   PreferredSize? bottom;
+  IconThemeData? iconTheme;
   double preferedSizeHeight;
   Widget? leading;
   bool? centerTitle;
@@ -16,6 +17,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
     required this.title,
     this.centerTitle,
     this.bottom,
+    this.iconTheme,
     required this.preferedSizeHeight,
     this.leading,
     required this.context,
@@ -33,6 +35,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       elevation: 0,
       titleTextStyle: MyTextStyle.signUpViewAppBarTitleTextStyle,
       bottom: bottom,
+      iconTheme: iconTheme,
     );
   }
 

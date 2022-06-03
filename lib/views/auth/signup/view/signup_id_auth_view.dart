@@ -15,7 +15,8 @@ class SignUpIdView extends StatelessWidget {
         context: context,
         title: const Text("Your personal ID"),
         centerTitle: true,
-        preferedSizeHeight: 0.08,
+        preferedSizeHeight: 0.07,
+        iconTheme: IconThemeData(color: ColorConst.splashScreenColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -109,7 +110,7 @@ class SignUpIdView extends StatelessWidget {
                     ),
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
-                      fixedSize: (const Size(350, 56)),
+                      fixedSize: (const Size(350, 54)),
                       primary: ColorConst.splashScreenColor,
                       shape: RoundedRectangleBorder(
                         borderRadius:
