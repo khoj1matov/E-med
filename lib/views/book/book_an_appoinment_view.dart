@@ -217,7 +217,9 @@ class BookAnAppoinmentView extends StatelessWidget {
                                   .signupLoginViewElevatedButtonBorder,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/doctors');
+                          },
                         ),
                       ],
                     ),

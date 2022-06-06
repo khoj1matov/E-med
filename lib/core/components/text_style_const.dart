@@ -59,8 +59,19 @@ class MyTextStyle {
       );
 
   static get cancelTextStyle => const TextStyle(
-        // color: Colors.blue,
         fontSize: 18,
+        fontWeight: FontWeight.w500,
+      );
+
+  static get doctorsRecomendedTextStyle => TextStyle(
+        color: ColorConst.nuncOrciSedColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+      );
+
+  static get profileNameTextStyle => TextStyle(
+        color: ColorConst.kPrimaryBlack,
+        fontSize: 22,
         fontWeight: FontWeight.w500,
       );
 }

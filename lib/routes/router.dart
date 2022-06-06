@@ -6,7 +6,9 @@ import 'package:emed/views/auth/signup/view/signup_register_auth_view.dart';
 import 'package:emed/views/book/book_an_appoinment_view.dart';
 import 'package:emed/views/calendar/calendar_view.dart';
 import 'package:emed/views/cart/view/cart_view.dart';
+import 'package:emed/views/doctors/book_an_appoinment2.view.dart';
 import 'package:emed/views/doctors/doctors_view.dart';
+import 'package:emed/views/doctors/profile_view.dart';
 import 'package:emed/views/home/home_view.dart';
 import 'package:emed/views/hospital/hospital_view.dart';
 import 'package:emed/views/splash/splash_view.dart';
@@ -40,14 +42,19 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const HomeView());
       case '/cart':
         return MaterialPageRoute(builder: (_) => const CartView());
-      case '/tratments':
+      case '/treatments':
         return MaterialPageRoute(builder: (_) => const TreatmentsView());
       case '/doctors':
-        return MaterialPageRoute(builder: (_) => const DoctorsView());
+        return MaterialPageRoute(builder: (_) => DoctorsView());
       case '/hospital':
         return MaterialPageRoute(builder: (_) => const HospitalView());
       case '/book_an_appoinment':
         return MaterialPageRoute(builder: (_) => const BookAnAppoinmentView());
+      case '/profile':
+        return MaterialPageRoute(builder: (_) => const ProfileView());
+      case '/book_an_appoinment2':
+        return MaterialPageRoute(builder: (_) => const BookAnAppoinment2View());
+    
     }
   }
 }

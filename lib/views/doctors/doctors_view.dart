@@ -1,4 +1,4 @@
-import 'package:emed/core/components/borders_comp.dart';
+import 'package:emed/core/components/list_comp.dart';
 import 'package:emed/core/components/text_style_const.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
@@ -50,10 +50,64 @@ class DoctorsView extends StatelessWidget {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Divider(
             thickness: 0.5,
             color: ColorConst.doctorsSearchTextColor,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              "Recommended doctors for you",
+              style: MyTextStyle.doctorsRecomendedTextStyle,
+            ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.63,
+            child: ListView.builder(
+              itemBuilder: (context, __) => InkWell(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: ColorConst.splashScreenColor,
+                  ),
+                  title: Text(
+                    ListComp.list[__]["title"].toString(),
+                    style: MyTextStyle.signUpViewAppBarTitleTextStyle,
+                  ),
+                  subtitle: Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          ListComp.list[__]["category"].toString(),
+                          style: MyTextStyle.doctorsRecomendedTextStyle,
+                        ),
+                        Divider(
+                          thickness: 0.3,
+                          color: ColorConst.kPrimaryBlack,
+                        ),
+                      ],
+                    ),
+                  ),
+                  trailing: const Icon(Icons.chevron_right),
+                ),
+                onTap: () {},
+              ),
+              itemCount: ListComp.list.length,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            child: Text(
+              "List of doctors",
+              style: MyTextStyle.doctorsRecomendedTextStyle,
+            ),
+          ),
+          Divider(
+            thickness: 0.8,
+            color: ColorConst.kPrimaryBlack,
           ),
         ],
       ),

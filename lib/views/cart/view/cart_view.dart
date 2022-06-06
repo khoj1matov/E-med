@@ -1,3 +1,4 @@
+import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/views/doctors/doctors_view.dart';
 import 'package:emed/views/home/home_view.dart';
 import 'package:emed/views/hospital/hospital_view.dart';
@@ -17,7 +18,6 @@ class _CartViewState extends State<CartView>
   late TabController tabController;
 
   int currentIndex = 0;
-  Color colorTabBar = Colors.black;
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class _CartViewState extends State<CartView>
     return Scaffold(
       body: TabBarView(
         controller: tabController,
-        children: const [
+        children: [
           HomeView(),
           TreatmentsView(),
           DoctorsView(),
@@ -41,10 +41,10 @@ class _CartViewState extends State<CartView>
         indicatorColor: Colors.transparent,
         controller: tabController,
         tabs: [
-          tabs('home-fill', colorTabBar, 0),
-          tabs("syringe 1", colorTabBar, 1),
-          tabs("doctor 1", colorTabBar, 2),
-          tabs("hospital", colorTabBar, 3),
+          tabs('home-fill', 0),
+          tabs("syringe 1", 1),
+          tabs("doctor 1", 2),
+          tabs("hospital", 3),
         ],
         onTap: (v) {
           currentIndex = tabController.index;
@@ -54,11 +54,11 @@ class _CartViewState extends State<CartView>
     );
   }
 
-  Tab tabs(String iconName, color, numIndex) {
+  Tab tabs(String iconName, numIndex) {
     return Tab(
       icon: SvgPicture.asset(
         "assets/icons/$iconName.svg",
-        color: currentIndex == numIndex ? color : Colors.red,
+        color: currentIndex == numIndex ? ColorConst.splashScreenColor : ColorConst.nuncOrciSedColor,
       ),
     );
   }
