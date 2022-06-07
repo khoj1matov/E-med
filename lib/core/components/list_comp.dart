@@ -26,4 +26,14 @@ class ListComp {
       "category": "Endocrinology",
     },
   ];
+
+  static final List<String> listPicture = [
+    "bir",
+    "ikki",
+    "uch",
+    "tort",
+    "besh",
+    "olti",
+    "yetti",
+  ];
 }

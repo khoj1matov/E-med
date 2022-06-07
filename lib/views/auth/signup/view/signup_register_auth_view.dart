@@ -127,7 +127,7 @@ class SignUpRegisterView extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/signup_id');
+                            Navigator.pushReplacementNamed(context, '/signup_id');
                           },
                         ),
                       ],

@@ -13,6 +13,10 @@ class ColorConst {
   static Color listTilleblablaGreenColor = const Color(0XFFECF8F0);
   static Color doctorsSearchColor = const Color(0XFF767680).withOpacity(0.12);
   static Color starColor = Colors.orange;
+  static Color hospitalCalendarColor = const Color(0xFF393647).withOpacity(0.8);
+
+  static Color hospitalTimeBackGroundColor =
+      const Color(0XFFFFFFFF).withOpacity(0.8);
   static Color doctorsSearchTextColor =
       const Color(0XFF3C3C43).withOpacity(0.6);
 }

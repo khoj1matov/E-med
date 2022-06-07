@@ -82,7 +82,7 @@ class SignUpLoginAuthView extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(
+                      Navigator.pushReplacementNamed(
                         context,
                         '/login',
                       );

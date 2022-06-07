@@ -118,7 +118,8 @@ class SignUpIdView extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, "/cart");
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/cart', (route) => false);
                     },
                   ),
                 ],

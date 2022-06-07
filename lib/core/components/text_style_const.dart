@@ -74,4 +74,10 @@ class MyTextStyle {
         fontSize: 22,
         fontWeight: FontWeight.w500,
       );
+
+   static get hospitalCalendarTextStyle => TextStyle(
+        color: ColorConst.hospitalCalendarColor,
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+      );
 }
