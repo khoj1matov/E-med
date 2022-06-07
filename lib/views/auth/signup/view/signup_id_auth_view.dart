@@ -110,7 +110,7 @@ class SignUpIdView extends StatelessWidget {
                     ),
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
-                      fixedSize: (const Size(350, 54)),
+                      fixedSize: const Size(350, 54),
                       primary: ColorConst.splashScreenColor,
                       shape: RoundedRectangleBorder(
                         borderRadius:
