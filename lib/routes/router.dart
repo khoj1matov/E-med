@@ -10,6 +10,7 @@ import 'package:emed/views/doctors/book_an_appoinment2.view.dart';
 import 'package:emed/views/doctors/doctors_view.dart';
 import 'package:emed/views/doctors/profile_view.dart';
 import 'package:emed/views/home/home_view.dart';
+import 'package:emed/views/hospital/hospital_status_view.dart';
 import 'package:emed/views/hospital/hospital_view.dart';
 import 'package:emed/views/splash/splash_view.dart';
 import 'package:emed/views/treatments/treatments_view.dart';
@@ -54,7 +55,8 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const ProfileView());
       case '/book_an_appoinment2':
         return MaterialPageRoute(builder: (_) => const BookAnAppoinment2View());
-    
+      case '/hospital_status':
+        return MaterialPageRoute(builder: (_) => const HospitalStatusView());
     }
   }
 }
