@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
       ),
       onGenerateRoute: MyRoutes.instance.onGenerateRoute,
-      initialRoute: "/splash",
+      initialRoute: "/cart",
     );
   }
 }
