@@ -21,7 +21,14 @@ class _HomeViewState extends State<HomeView> {
         centerTitle: true,
         context: context,
         preferedSizeHeight: 0.07,
-        leading: const Image(image: AssetImage("assets/images/ellipse.png")),
+        leading: InkWell(
+          child: const Image(
+            image: AssetImage("assets/images/ellipse.png"),
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, "/profile");
+          },
+        ),
         title: SvgPicture.asset("assets/icons/Group 33665.svg"),
         action: [
           IconButton(
@@ -81,7 +88,9 @@ class _HomeViewState extends State<HomeView> {
                           MyBorderComp.signupLoginViewElevatedButtonBorder,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/book_an_appoinment");
+                  },
                 ),
               ),
               Divider(

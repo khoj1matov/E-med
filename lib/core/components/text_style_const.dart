@@ -75,9 +75,18 @@ class MyTextStyle {
         fontWeight: FontWeight.w500,
       );
 
-   static get hospitalCalendarTextStyle => TextStyle(
+  static get hospitalCalendarTextStyle => TextStyle(
         color: ColorConst.hospitalCalendarColor,
         fontSize: 14,
         fontWeight: FontWeight.w600,
+      );
+
+  static get profileDeletePhotoTextStyle => TextStyle(
+        color: ColorConst.profileDeletePhotoColor,
+      );
+
+  static get logOutTextStyle => TextStyle(
+        color: ColorConst.profileDeletePhotoColor,
+        fontSize: 18,
       );
 }

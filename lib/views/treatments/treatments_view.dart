@@ -64,7 +64,14 @@ class _TreatmentsViewState extends State<TreatmentsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Image(image: AssetImage("assets/images/ellipse.png")),
+        leading: InkWell(
+          child: const Image(
+            image: AssetImage("assets/images/ellipse.png"),
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, "/profile");
+          },
+        ),
         title: SvgPicture.asset("assets/icons/Group 33665.svg"),
         centerTitle: true,
         actions: [

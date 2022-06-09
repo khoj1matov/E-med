@@ -11,44 +11,7 @@ class DoctorsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
-        centerTitle: true,
-        context: context,
-        preferedSizeHeight: 0.12,
-        leading: const Image(image: AssetImage("assets/images/ellipse.png")),
-        title: SvgPicture.asset("assets/icons/Group 33665.svg"),
-        action: [
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/Group 33659.svg"),
-            onPressed: () {},
-          )
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(4),
-          child: InkWell(
-            child: Container(
-              height: 36,
-              width: 340,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: ColorConst.doctorsSearchColor,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.search, color: ColorConst.doctorsSearchTextColor),
-                  Text(
-                    "Search doctors by name or position",
-                    style: MyTextStyle.doctorSearchTextStyle,
-                  ),
-                  const SizedBox(width: 5),
-                ],
-              ),
-            ),
-            onTap: () {},
-          ),
-        ),
-      ),
+      appBar: _appBar(context),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -93,7 +56,9 @@ class DoctorsView extends StatelessWidget {
                   ),
                   trailing: const Icon(Icons.chevron_right),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/profile");
+                },
               ),
               itemCount: ListComp.list.length,
             ),
@@ -110,6 +75,54 @@ class DoctorsView extends StatelessWidget {
             color: ColorConst.kPrimaryBlack,
           ),
         ],
+      ),
+    );
+  }
+
+  MyAppBar _appBar(BuildContext context) {
+    return MyAppBar(
+      centerTitle: true,
+      context: context,
+      preferedSizeHeight: 0.12,
+      leading: InkWell(
+        child: const Image(
+          image: AssetImage("assets/images/ellipse.png"),
+        ),
+        onTap: () {
+          Navigator.pushNamed(context, "/profile");
+        },
+      ),
+      title: SvgPicture.asset("assets/icons/Group 33665.svg"),
+      action: [
+        IconButton(
+          icon: SvgPicture.asset("assets/icons/Group 33659.svg"),
+          onPressed: () {},
+        )
+      ],
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(4),
+        child: InkWell(
+          child: Container(
+            height: 36,
+            width: 340,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: ColorConst.doctorsSearchColor,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.search, color: ColorConst.doctorsSearchTextColor),
+                Text(
+                  "Search doctors by name or position",
+                  style: MyTextStyle.doctorSearchTextStyle,
+                ),
+                const SizedBox(width: 5),
+              ],
+            ),
+          ),
+          onTap: () {},
+        ),
       ),
     );
   }

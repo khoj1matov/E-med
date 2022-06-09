@@ -4,8 +4,8 @@ import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class ProfileView extends StatelessWidget {
-  const ProfileView({Key? key}) : super(key: key);
+class DoctorsProfileView extends StatelessWidget {
+  const DoctorsProfileView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

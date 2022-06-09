@@ -16,6 +16,11 @@ class ColorConst {
   static Color hospitalCalendarColor = const Color(0xFF393647).withOpacity(0.8);
   static Color hospitalAndMapColor = const Color(0xFF92949D).withOpacity(0.21);
   static Color hospitalAndMap2Color = const Color(0xFFB0B4C9).withOpacity(0.21);
+  static Color profileDeletePhotoColor = Colors.red;
+  static Color maleColor = const Color(0XFF4F8FC0).withOpacity(0.1);
+  static Color male2Color = Colors.blue;
+  static Color addAnotherAccountColor = const Color(0XFFEAF2FC);
+  static Color logOutColor = const Color(0XFFFBF6F6);
 
   static Color hospitalTimeBackGroundColor =
       const Color(0XFFFFFFFF).withOpacity(0.8);

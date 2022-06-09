@@ -170,7 +170,7 @@ class HospitalView extends StatelessWidget {
                                                 image: DecorationImage(
                                                   fit: BoxFit.cover,
                                                   image: AssetImage(
-                                                    "assets/images/${ListComp.listPicture[index]}.png",
+                                                    "assets/images/${ListComp.listHospitalPicture[index]}.png",
                                                   ),
                                                 ),
                                               ),
@@ -218,7 +218,8 @@ class HospitalView extends StatelessWidget {
                                       ],
                                     );
                                   },
-                                  itemCount: ListComp.listPicture.length,
+                                  itemCount:
+                                      ListComp.listHospitalPicture.length,
                                 ),
                               ),
                             ),
@@ -330,7 +331,14 @@ class HospitalView extends StatelessWidget {
       centerTitle: true,
       context: context,
       preferedSizeHeight: 0.12,
-      leading: const Image(image: AssetImage("assets/images/ellipse.png")),
+      leading: InkWell(
+        child: const Image(
+          image: AssetImage("assets/images/ellipse.png"),
+        ),
+        onTap: () {
+          Navigator.pushNamed(context, "/profile");
+        },
+      ),
       title: SvgPicture.asset("assets/icons/Group 33665.svg"),
       action: [
         IconButton(
